@@ -73,7 +73,7 @@ input[type=checkbox] {
     display: none;
 }
 .navbar {
-    display: none;
+    display: block;
     position: fixed;
 }
 
@@ -208,7 +208,7 @@ input[type=checkbox] {
 nav {
     position: fixed;
     right: 50px;
-    display: flex;
+    display: none;
     flex-direction: row;
     padding: 0;
     top: 20px;
