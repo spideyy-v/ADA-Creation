@@ -1,0 +1,241 @@
+
+* {
+    font-family: 'Rubik Lines', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(145deg, #0d0d0d, #1a1a1a) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #00ffff;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: twinkle 2s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .glow {
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+      }
+      to {
+        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+      }
+    }
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+}
+/* Nav Bar Starts Here.... */
+
+input[type=checkbox] {
+    display: none;
+}
+.navbar {
+    display: none;
+    position: fixed;
+}
+
+.span-menu {
+    width: 20px;
+    height: 15px;
+    display: flex;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 100;
+}
+.span-menu span {
+    height: 2.3px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 0.5px #00000047;
+    transform: 0.5s;
+}
+
+.opt {
+    position: fixed;
+    top: 0;
+    left: -1000px;
+    background: linear-gradient(to right, #05d7db, #00000000);
+    width: 300px;
+    height: 100vh;
+    justify-content: left;
+    padding: 10px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.opt ul {
+    position: fixed;
+    top: 25px;
+    width: 200px;
+}
+
+.opt li {
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    list-style: none;
+    transition: 0.2s;
+}
+
+.opt li:hover {
+    background: linear-gradient(to left, #ffffff00, #000000, #41414100);
+    color: #00ffffdd;
+    transition: 0.2s;
+}
+
+.opt li::before {
+    content: '⮞';
+}
+
+.headline {
+    font-family: 'Rubik Lines';
+    margin-bottom: 0;
+    font-size: 25px;
+    transition: 0.3s;
+    font-weight: normal;
+}
+.desc {
+    font-family: 'Rubik Lines';
+    font-weight: 100;
+    font-size: 15px;
+    font-style: normal;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.headline:hover {
+    cursor: pointer;
+    color: #00ffff;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+.desc:hover {
+    cursor: pointer;
+    color: #00ffff;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.intro {
+    margin-bottom: 25px;
+}
+
+#menu + .span-menu span:nth-child(1) {
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+
+#menu + .span-menu span:nth-child(2) {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#menu + .span-menu span:nth-child(3) {
+    transform: rotate(-0deg);
+    transition: 0.5s;
+}
+
+#menu:checked + .span-menu span:nth-child(1) {
+    transform: rotate(45deg);
+    background-color: #dbdbdb;
+    transition: 0.5s;
+}
+
+#menu:checked + .span-menu span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu:checked + .span-menu span:nth-child(3) {
+    transform: rotate(-45deg);
+    background-color: #ffffff;
+    transition: 0.5s;
+}
+
+#menu:checked ~ .opt {
+    left: 0px;
+    transition: 0.5s;
+}
+/* Nav Bar Ends Here */
+
+
+nav {
+    position: fixed;
+    right: 50px;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    top: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.nav-opt {
+    color: #fff;
+    margin: 0 25px;
+    transition: 0.2s;
+}
+
+.nav-opt:hover {
+    color: #00ffff;
+    transform: scale(1.1);
+    margin: 0 25px;
+    transition: 0.2;
+}
+
+.ada {
+    position: fixed;
+    top: 15px;
+    left: 25px;
+    align-self: center;
+}
+.land {
+    justify-content: center;
+    
+}
